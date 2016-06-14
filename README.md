@@ -1,11 +1,11 @@
 # Safe Navigation Operator
 
-This blog is for demonstrating the Safe Navigation Operator(?.)
+This blog demonstrates the use of Safe Navigation Operator(?.)
 
 **Safe Navigation Operator(?.)** is already present in other scripting languages i.e. `Groovy` and there it is known as
-**Null-Safe Dereference**. First lets understand what is the scenario.
+**Null-Safe Dereference**. First let us understand the scenario where it is useful.
 
-A common error which we face a lot(`Cannot read property 'propertyName' of undefined`) in **JavaScript**, if we tried to
+We face a common error(`Cannot read property 'propertyName' of undefined`) a lot in **JavaScript**, if we try to
 read property on a undefined object. i.e.
 
 ```JavaScript
@@ -23,7 +23,7 @@ if (user) {
 ```
 
 In **AngularJS**, we write **JavaScript** into **HTML/View**. And in **AngularJS 1.X**, it silently fails, if user 
-object is not defined and does not display any thing.
+object is not defined and does not display anything.
 
 ```HTML
 <div>
@@ -44,7 +44,7 @@ to add extra check before reading the property from object:
 </div> 
 ```
 
-So **Angular2** have introduced **Safe Navigation Operator(?.)** for the same. With (?.) our code will be more smaller and
+So to facilitate this extra check **Angular2** has introduced **Safe Navigation Operator(?.)**. With (?.) our code will be smaller and
 readable:
 
 ```HTML
