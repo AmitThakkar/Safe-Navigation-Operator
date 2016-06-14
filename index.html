@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Safe Navigation Operator by AmitThakkar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Safe Navigation Operator</h1>
+      <h2 class="project-tagline">This blog is for demonstrating the Safe Navigation Operator(?.)</h2>
+      <a href="https://github.com/AmitThakkar/Safe-Navigation-Operator" class="btn">View on GitHub</a>
+      <a href="https://github.com/AmitThakkar/Safe-Navigation-Operator/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/AmitThakkar/Safe-Navigation-Operator/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="safe-navigation-operator" class="anchor" href="#safe-navigation-operator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Safe Navigation Operator</h1>
+
+<p>This blog is for demonstrating the Safe Navigation Operator(?.)</p>
+
+<p><strong>Safe Navigation Operator(?.)</strong> is already present in other scripting languages i.e. <code>Groovy</code> and there it is known as
+<strong>Null-Safe Dereference</strong>. First lets understand what is the scenario.</p>
+
+<p>In <strong>JavaScript</strong> we face an error(<code>Cannot read property 'propertyName' of undefined</code>), if we tried to read property on 
+a undefined object. i.e.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> user;
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">user</span>.<span class="pl-c1">name</span>); <span class="pl-c">// Uncaught TypeError: Cannot read property 'name' of undefined</span></pre></div>
+
+<p>To handle this error, we add check for <strong>user</strong> object, if user is defined then only we read the name i.e.:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> user;
+<span class="pl-k">if</span> (user) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">user</span>.<span class="pl-c1">name</span>); <span class="pl-c">// Uncaught TypeError: Cannot read property 'name' of undefined</span>
+}</pre></div>
+
+<p>In <strong>AngularJS</strong>, we write <strong>JavaScript</strong> into <strong>HTML/View</strong>. And in <strong>AngularJS 1.X</strong>, it silently fails, if user 
+object is not defined and does not display any thing.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span>&gt;
+    User Details:
+    Name: {{user.name}}
+    Age: {{user.age}}
+&lt;/<span class="pl-ent">div</span>&gt;  </pre></div>
+
+<p>But in <strong>Angular2</strong>, it will throw an error <code>Uncaught TypeError: Cannot read property 'name' of undefined</code>. So we have
+to add extra check before reading the property from object:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span>&gt;
+    User Details:
+    Name: {{user <span class="pl-ii">&amp;&amp;</span> user.name}}
+    Age: {{user <span class="pl-ii">&amp;&amp;</span> user.age}}
+&lt;/<span class="pl-ent">div</span>&gt; </pre></div>
+
+<p><strong>Angular2</strong> have introduce <strong>Safe Navigation Operator(?.)</strong> for the same. With (?.) our code will be more smaller and
+readable:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span>&gt;
+    User Details:
+    Name: {{user?.name}}
+    Age: {{user?.age}}
+&lt;/<span class="pl-ent">div</span>&gt;  </pre></div>
+
+<blockquote>
+<p><code>Safe Navigation Operator(?.)</code> is used to avoid <code>Cannot read property 'propertyName' of undefined</code>. Typically when
+we have a reference of an object and we might need to verify that it is not <strong>undefined</strong> before accessing the property
+the object.</p>
+</blockquote>
+
+<h2>
+<a id="follow-me" class="anchor" href="#follow-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Follow Me</h2>
+
+<p><a href="https://github.com/AmitThakkar">Github</a></p>
+
+<p><a href="https://twitter.com/amit_thakkar01">Twitter</a></p>
+
+<p><a href="https://in.linkedin.com/in/amitthakkar01">LinkedIn</a></p>
+
+<p><a href="http://amitthakkar.github.io/">More Blogs By Me</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/AmitThakkar/Safe-Navigation-Operator">Safe Navigation Operator</a> is maintained by <a href="https://github.com/AmitThakkar">AmitThakkar</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
