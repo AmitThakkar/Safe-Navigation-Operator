@@ -22,12 +22,12 @@
       <h1>
 <a id="safe-navigation-operator" class="anchor" href="#safe-navigation-operator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Safe Navigation Operator</h1>
 
-<p>This blog is for demonstrating the Safe Navigation Operator(?.)</p>
+<p>This blog demonstrates the use of Safe Navigation Operator(?.)</p>
 
 <p><strong>Safe Navigation Operator(?.)</strong> is already present in other scripting languages i.e. <code>Groovy</code> and there it is known as
-<strong>Null-Safe Dereference</strong>. First lets understand what is the scenario.</p>
+<strong>Null-Safe Dereference</strong>. First let us understand the scenario where it is useful.</p>
 
-<p>A common error which we face a lot(<code>Cannot read property 'propertyName' of undefined</code>) in <strong>JavaScript</strong>, if we tried to
+<p>We face a common error(<code>Cannot read property 'propertyName' of undefined</code>) a lot in <strong>JavaScript</strong>, if we try to
 read property on a undefined object. i.e.</p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> user;
@@ -41,7 +41,7 @@ read property on a undefined object. i.e.</p>
 }</pre></div>
 
 <p>In <strong>AngularJS</strong>, we write <strong>JavaScript</strong> into <strong>HTML/View</strong>. And in <strong>AngularJS 1.X</strong>, it silently fails, if user 
-object is not defined and does not display any thing.</p>
+object is not defined and does not display anything.</p>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span>&gt;
     User Details:
@@ -58,7 +58,7 @@ to add extra check before reading the property from object:</p>
     Age: {{user <span class="pl-ii">&amp;&amp;</span> user.age}}
 &lt;/<span class="pl-ent">div</span>&gt; </pre></div>
 
-<p>So <strong>Angular2</strong> have introduced <strong>Safe Navigation Operator(?.)</strong> for the same. With (?.) our code will be more smaller and
+<p>So to facilitate this extra check <strong>Angular2</strong> has introduced <strong>Safe Navigation Operator(?.)</strong>. With (?.) our code will be smaller and
 readable:</p>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span>&gt;
