@@ -7,7 +7,7 @@ import {User} from './user'
 @Component({
     selector: 'my-app',
     template: `
-        <h1>Old Way(in Angular1.x)</h1>
+        <h1>Without Safe Navigation Operator</h1>
         <div>
             User Details:
             Name: {{user && user.name}}
