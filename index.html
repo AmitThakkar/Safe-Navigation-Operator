@@ -27,8 +27,8 @@
 <p><strong>Safe Navigation Operator(?.)</strong> is already present in other scripting languages i.e. <code>Groovy</code> and there it is known as
 <strong>Null-Safe Dereference</strong>. First lets understand what is the scenario.</p>
 
-<p>In <strong>JavaScript</strong> we face an error(<code>Cannot read property 'propertyName' of undefined</code>), if we tried to read property on 
-a undefined object. i.e.</p>
+<p>A common error which we face a lot(<code>Cannot read property 'propertyName' of undefined</code>) in <strong>JavaScript</strong>, if we tried to
+read property on a undefined object. i.e.</p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> user;
 <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">user</span>.<span class="pl-c1">name</span>); <span class="pl-c">// Uncaught TypeError: Cannot read property 'name' of undefined</span></pre></div>
@@ -58,7 +58,7 @@ to add extra check before reading the property from object:</p>
     Age: {{user <span class="pl-ii">&amp;&amp;</span> user.age}}
 &lt;/<span class="pl-ent">div</span>&gt; </pre></div>
 
-<p><strong>Angular2</strong> have introduce <strong>Safe Navigation Operator(?.)</strong> for the same. With (?.) our code will be more smaller and
+<p>So <strong>Angular2</strong> have introduced <strong>Safe Navigation Operator(?.)</strong> for the same. With (?.) our code will be more smaller and
 readable:</p>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span>&gt;
@@ -68,9 +68,9 @@ readable:</p>
 &lt;/<span class="pl-ent">div</span>&gt;  </pre></div>
 
 <blockquote>
-<p><code>Safe Navigation Operator(?.)</code> is used to avoid <code>Cannot read property 'propertyName' of undefined</code>. Typically when
-we have a reference of an object and we might need to verify that it is not <strong>undefined</strong> before accessing the property
-the object.</p>
+<p><code>Safe Navigation Operator(?.)</code> is used to avoid error <code>Cannot read property 'propertyName' of undefined</code>. Typically 
+when we have a reference of an object and we might need to verify that it is not <strong>undefined</strong> before accessing the 
+property the object.</p>
 </blockquote>
 
 <h2>
